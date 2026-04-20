@@ -48,3 +48,38 @@ let newarray = [1,2,3,4,5];
 let squaredArray = newarray.
 map((num) => num*num);
 console.log(squaredArray);
+
+//filter on array
+//filter creates a new array with all elements that pass the test
+// implemented by the provided function
+let evenNumbers = [1,2,3,4,5];
+let filteredEvenNumbers = evenNumbers.
+filter (num => num%2 ===0);
+console.log (filteredEvenNumbers); //[2,4]
+
+//reduce on array
+//accumulator is the accumulated value  previously returned
+//if supplied and currentValue is the current element
+let sum = [1,2,3,4,5];
+let total =
+sum.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(total); //15
+
+//map reduce filter on object student marks
+let students = [
+    { name: "Alice", marks: 85},
+    { name: "Bob", marks: 92},
+    { name: "Charlie", marks: 78}
+];
+
+//map to get marks of all students
+let marks = students.map (student => student.name);
+console.log(names); //["alice","Bob","Charlie"]
+//filter to get students with mark greater than 80
+let topStudents = student.filter
+(student => student.marks > 80);
+console.log(topstudents); //[{name: "Alice", marks: 85}]
+//reduce to get total marks of all students
+let totalMarks = students.reduce
+((acc, student) => acc + student.marks,0);
+console.log(totalMarks); // 255
